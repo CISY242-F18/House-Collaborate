@@ -5,8 +5,8 @@
  * colors (only after it's been drawn, of course).
  *
  * This class was written as an early example for teaching Java with BlueJ.
- * 
- * @author  Michael Kšlling and David J. Barnes
+ *
+ * @author  Michael Kï¿½lling and David J. Barnes
  * @version 2011.07.31
  */
 public class Picture
@@ -34,6 +34,18 @@ public class Picture
     private Triangle arm;
     private Triangle arm1;
     private boolean drawn;
+    private Square background;
+    private Square background2;
+    private Triangle hill;
+    private Person sonicBody;
+    private Triangle sonicHair;
+    private Circle sonicHead;
+    private Circle sonicEye1;
+    private Circle sonicPupil1;
+    private Circle sonicEye2;
+    private Circle sonicPupil2;
+    private Circle sonicMouth;
+    private boolean drawn;
 
     /**
      * Constructor for objects of class Picture
@@ -59,6 +71,18 @@ public class Picture
         slender = new Person();
         arm = new Triangle();
         arm1 = new Triangle();
+        background = new Square();
+        background2 = new Square();
+        hill = new Triangle();
+        sun = new Circle();
+        sonicBody = new Person();
+        sonicHair = new Triangle();
+        sonicHead = new Circle();
+        sonicEye1 = new Circle();
+        sonicPupil1 = new Circle();
+        sonicEye2 = new Circle();
+        sonicPupil2 = new Circle();
+        sonicMouth = new Circle();
     }
 
     /**
@@ -71,7 +95,7 @@ public class Picture
         wall.moveVertical(20);
         wall.changeSize(120);
         wall.makeVisible();
-        
+
         window = new Square();
         window.changeColor("black");
         window.moveHorizontal(-120);
@@ -79,7 +103,7 @@ public class Picture
         window.changeSize(40);
         window.makeVisible();
 
-        roof = new Triangle();  
+        roof = new Triangle();
         roof.changeSize(60, 180);
         roof.moveHorizontal(20);
         roof.moveVertical(-60);
@@ -92,7 +116,82 @@ public class Picture
         sun.changeSize(80);
         sun.makeVisible();
     }
-    
+
+    public void draw_Basily()
+  {
+        background2.changeColor("blue");
+        background2.moveHorizontal(-375);
+        background2.moveVertical(-180);
+        background2.changeSize(580);
+        background2.makeVisible();
+
+        background.changeColor("green");
+        background.moveHorizontal(-375);
+        background.moveVertical(20);
+        background.changeSize(580);
+        background.makeVisible();
+
+
+
+        hill.changeSize(60, 180);
+        hill.moveHorizontal(-30);
+        hill.moveVertical(-60);
+        hill.makeVisible();
+
+        sun.changeColor("yellow");
+        sun.moveHorizontal(100);
+        sun.moveVertical(-40);
+        sun.changeSize(80);
+        sun.makeVisible();
+
+        sonicBody.changeColor("blue");
+        sonicBody.changeSize(80, 60);
+        sonicBody.moveHorizontal(30);
+        sonicBody.moveVertical(50);
+        sonicBody.makeVisible();
+
+        sonicHair.changeColor("blue");
+        sonicHair.changeSize(40, 30);
+        sonicHair.moveHorizontal(98);
+        sonicHair.moveVertical(30);
+        sonicHair.makeVisible();
+
+        sonicHead.changeColor("blue");
+        sonicHead.changeSize(45);
+        sonicHead.moveHorizontal(55);
+        sonicHead.moveVertical(110);
+        sonicHead.makeVisible();
+
+        sonicEye1.changeColor("white");
+        sonicEye1.changeSize(15);
+        sonicEye1.moveHorizontal(57);
+        sonicEye1.moveVertical(123);
+        sonicEye1.makeVisible();
+
+        sonicEye2.changeColor("white");
+        sonicEye2.changeSize(15);
+        sonicEye2.moveHorizontal(77);
+        sonicEye2.moveVertical(123);
+        sonicEye2.makeVisible();
+
+        sonicPupil1.changeColor("black");
+        sonicPupil1.changeSize(5);
+        sonicPupil1.moveHorizontal(60);
+        sonicPupil1.moveVertical(128);
+        sonicPupil1.makeVisible();
+
+        sonicPupil2.changeColor("black");
+        sonicPupil2.changeSize(5);
+        sonicPupil2.moveHorizontal(80);
+        sonicPupil2.moveVertical(128);
+        sonicPupil2.makeVisible();
+
+        sonicMouth.changeColor("black");
+        sonicMouth.changeSize(10);
+        sonicMouth.moveHorizontal(70);
+        sonicMouth.moveVertical(140);
+        sonicMouth.makeVisible();
+  }
     public void draw_Legocki()
     {
         Circle outerBow;
@@ -108,7 +207,7 @@ public class Picture
         Square shaft1;
         Square shaft2;
         Square shaft3;
-        
+
         outerBow = new Circle(40,260,180,"red");
         innerBow = new Circle(40,265,178,"white");
         dude = new Person();
@@ -122,7 +221,7 @@ public class Picture
         shaft1 = new Square(10,210,180,"red");
         shaft2 = new Square(10,220,180,"red");
         shaft3 = new Square(10,230,180,"red");
-        
+
         outerBow.makeVisible();
         innerBow.makeVisible();
         dude.makeVisible();
@@ -168,117 +267,117 @@ public class Picture
     public void draw_Rodriguez()
     {
         if(!drawn) {
-            
-            
+
+
             bg.moveHorizontal(-400);
             bg.moveVertical(-200);
             bg.changeSize(1500);
             bg.changeColor("grey");
             bg.makeVisible();
-            
-    
+
+
             ground.moveHorizontal(-350);
             ground.moveVertical(115);
             ground.changeSize(1500);
             ground.changeColor("dark_grey");
             ground.makeVisible();
-            
+
             moon.changeColor("silver");
             moon.moveHorizontal(180);
             moon.moveVertical(-70);
             moon.changeSize(45);
             moon.makeVisible();
-            
+
             tree.changeSize(35, 85);
             tree.moveHorizontal(-145);
             tree.moveVertical(-80);
             tree.makeVisible();
             tree.changeColor("black_grey");
-            
+
             tree1.changeSize(35, 85);
             tree1.moveHorizontal(-145);
             tree1.moveVertical(-55);
             tree1.makeVisible();
             tree1.changeColor("black_grey");
-            
+
             tree2.changeSize(35, 85);
             tree2.moveHorizontal(-145);
             tree2.moveVertical(-30);
             tree2.makeVisible();
             tree2.changeColor("black_grey");
-            
+
             tree3.changeSize(35, 85);
             tree3.moveHorizontal(-145);
             tree3.moveVertical(-2);
             tree3.makeVisible();
             tree3.changeColor("black_grey");
-            
+
             tree4.changeSize(35, 85);
             tree4.moveHorizontal(-145);
             tree4.moveVertical(26);
             tree4.makeVisible();
             tree4.changeColor("black_grey");
-            
+
             tree_1.changeSize(35, 85);
             tree_1.moveHorizontal(215);
             tree_1.moveVertical(-80);
             tree_1.makeVisible();
             tree_1.changeColor("black_grey");
-            
+
             tree1_1.changeSize(35, 85);
             tree1_1.moveHorizontal(215);
             tree1_1.moveVertical(-55);
             tree1_1.makeVisible();
             tree1_1.changeColor("black_grey");
-            
+
             tree2_1.changeSize(35, 85);
             tree2_1.moveHorizontal(215);
             tree2_1.moveVertical(-30);
             tree2_1.makeVisible();
             tree2_1.changeColor("black_grey");
-            
+
             tree3_1.changeSize(35, 85);
             tree3_1.moveHorizontal(215);
             tree3_1.moveVertical(-2);
             tree3_1.makeVisible();
             tree3_1.changeColor("black_grey");
-            
+
             tree4_1.changeSize(35, 85);
             tree4_1.moveHorizontal(215);
             tree4_1.moveVertical(26);
             tree4_1.makeVisible();
             tree4_1.changeColor("black_grey");
-            
+
             wood.moveHorizontal(-260);
             wood.moveVertical(81);
             wood.changeSize(35);
             wood.changeColor("black_grey");
             wood.makeVisible();
-            
+
             wood_1.moveHorizontal(100);
             wood_1.moveVertical(81);
             wood_1.changeSize(35);
             wood_1.changeColor("black_grey");
             wood_1.makeVisible();
-            
+
             slender.changeSize(140,20);
             slender.moveVertical(-20);
             slender.changeColor("silver");
             slender.makeVisible();
-            
+
             arm.changeSize(8,40);
             arm.moveHorizontal(70);
             arm.moveVertical(38);
             arm.changeColor("silver");
             arm.makeVisible();
-            
+
             arm1.changeSize(8,40);
             arm1.moveHorizontal(70);
             arm1.moveVertical(46);
             arm1.changeColor("silver");
             arm1.makeVisible();
-    
-            
+
+
             drawn = true;
         }
     }
@@ -294,39 +393,39 @@ public class Picture
             square2.moveHorizontal(-310);
             square2.moveVertical(-300);
             square2.makeVisible();
-            
+
             square3.changeColor("green");
             square3.changeSize(2000);
             square3.moveHorizontal(-310);
             square3.moveVertical(100);
             square3.makeVisible();
-            
+
             square1.changeColor("brown");
             square1.moveVertical(100);
             square1.moveHorizontal(-115);
             square1.changeSize(30);
             square1.makeVisible();
-            
+
             square4.changeColor("brown");
             square4.moveVertical(70);
             square4.moveHorizontal(-115);
             square4.changeSize(30);
             square4.makeVisible();
-            
+
             triangle1.changeColor("green");
             triangle1.makeVisible();
-            
+
             triangle2.moveVertical(-30);
             triangle2.makeVisible();
-            
+
             circle.changeColor("yellow");
             circle.moveHorizontal(150);
             circle.moveVertical(-50);
             circle.makeVisible();
-            
+
             person.moveVertical(-10);
             person.makeVisible();
-            
+
             drawn = true;
         }
     }
